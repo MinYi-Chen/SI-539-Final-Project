@@ -1,0 +1,340 @@
+/* GLOBAL STYLES (Used in ALL HTML files)*/
+
+/* Basic page settings */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333333; 
+    background-color: #f4f4f4;
+}
+
+/* Main container to keep content centered and not too wide */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Global button styles */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Footer style */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333333;
+    color: #fff;
+    margin-top: 4rem;
+}
+
+/* Hidden "Skip to main content" button for keyboard users */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #1c5685;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    z-index: 2000;
+}
+
+/* Show the skip button when user presses 'Tab' key */
+.skip-link:focus {
+    top: 20px; 
+}
+
+/* no outline when mouse hovers */
+a:focus, button:focus {
+    outline: none;
+}
+/* Show focus outline only for keyboard users */
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #1c5685;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Navigation Bar Styles */
+header {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    text-align: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1c5685;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+/* Hover and Dropdown Styles */
+.nav-links a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    list-style: none;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+}
+
+.dropdown-content li a {
+    color: #333333;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Index Page Styles */
+/* About Me Box */
+.about-section {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+.about-section h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+}
+
+/* Gallery Section and Recipe Cards in index.html and all_recipes.html */
+
+.gallery-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.recipe-card {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-card a {
+    text-decoration: none;
+    color: #333333;
+    display: block; 
+}
+
+
+.recipe-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.recipe-card h3 {
+    padding: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* Change background and move up slightly when mouse hovers over a card */
+.recipe-card:hover, .recipe-card:focus-within {
+    background-color: #fafafa; 
+    transform: translateY(-5px);
+}
+
+/* Recipe Detail Page Styles */
+
+.nav-reading-btn:hover {
+    background-color: #123958; 
+}
+
+/* Large main food picture */
+.food-image {
+    width: 100%;
+    max-width: 800px;
+    max-height: 450px;
+    border-radius: 8px;
+    display: block;
+    margin: 0;
+}
+
+/* Mobile Toggle Container */
+.mobile-toggle-container {
+    display: flex;
+    gap: 10px;
+    margin: 1.5rem 0;
+}
+/* Toggle buttons for Instructions and Ingredients */
+.toggle-btn {
+    background-color: #fff;
+    color: #1c5685;
+    border: 2px solid #1c5685;
+    border-radius: 10px;
+    padding: 8px 28px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    width: 140px;
+}
+/* Active toggle button */
+.toggle-btn.active {
+    background-color: #1c5685;
+    color: white;
+}
+/* Hidden on mobile */
+.mobile-hidden {
+    display: none;
+}
+
+/* Ingredients checkbox list */
+.ingredient-list {
+    list-style: none; 
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.ingredient-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.ingredient-list input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+/* Add line-through text when checkbox is checked */
+.ingredient-list input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    header {
+        padding: 0 2rem;
+    }
+
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        height: 70px;
+    }
+
+    .logo {
+        white-space: nowrap;
+    }
+
+    .logo a {
+        font-size: clamp(1.2rem, 4vw, 2rem); 
+    }
+
+    .nav-links {
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+    }
+
+    .nav-links a, .nav-reading-btn {
+        white-space: nowrap;
+    }
+
+    /* Make the About Me section side-by-side */
+    .about-content {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    /* Show 3 recipe cards per row */
+    .recipe-grid {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+    
+    .mobile-hidden {
+        display: block; 
+    }
+    .mobile-toggle-container {
+        display: none; 
+    }
+}
