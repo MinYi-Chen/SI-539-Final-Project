@@ -224,10 +224,6 @@ header {
 
 /* Recipe Detail Page Styles */
 
-.nav-reading-btn:hover {
-    background-color: #123958; 
-}
-
 /* Large main food picture */
 .food-image {
     width: 100%;
@@ -316,7 +312,7 @@ header {
         gap: 1.5rem;
     }
 
-    .nav-links a, .nav-reading-btn {
+    .nav-links a {
         white-space: nowrap;
     }
 
