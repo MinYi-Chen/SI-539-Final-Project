@@ -18,7 +18,7 @@
                 <li class="dropdown">
                     <a href="all_recipes.html" class="dropbtn">My Recipes</a>
                     <ul class="dropdown-content">
-                        <li><a href="all_recipes.html">All Recipes</a></li>
+                        <li><a href="all_recipes.html">Recipes</a></li>
                         <li><a href="recipe_oatmeal_cookies.html">Oatmeal Cookies</a></li>
                         <li><a href="recipe_lemon_pound_cake.html">Lemon Pound Cake</a></li>
                         <li><a href="recipe_chocolate_cake.html">Chocolate Cake</a></li>
@@ -32,38 +32,49 @@
 
     <main id="main-content">
         <section class="gallery-section">
-            <h2>All Recipes</h2>
+            <h2>Recipes Gallery</h2>
+
+            <div class="filter-container">
+                <select id="recipe-filter" class="filter-select" aria-label="Filter by Category">
+                    <option value="all">Filter by Category: All</option>
+                    <option value="cookies">Cookies</option>
+                    <option value="cake">Cakes</option>
+                    <option value="muffin">Muffins</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
             <div class="recipe-grid">
 
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="cookies">
                     <a href="recipe_oatmeal_cookies.html">
                         <img src="images/recipe_oatmeal_cookies.jpg" alt="photo of healthy oatmeal cookies">
                         <h3>Healthy Oatmeal Cookies</h3>
                     </a>
                 </div>
 
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="cake">
                     <a href="recipe_lemon_pound_cake.html">
                         <img src="images/recipe_lemon_pound_cake.jpg" alt="photo of lemon pound cake">
                         <h3>Lemon Pound Cake</h3>
                     </a>
                 </div>
 
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="cake">
                     <a href="recipe_chocolate_cake.html">
                         <img src="images/recipe_chocolate_cake.jpg" alt="photo of a rich chocolate cake on a plate">
                         <h3>Chocolate Cake</h3>
                     </a>
                 </div>
 
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="muffin">
                     <a href="recipe_healthy_muffin.html">
                         <img src="images/recipe_healthy_muffin.jpg" alt="photo of freshly baked healthy muffins">
                         <h3>Healthy Muffin</h3>
                     </a>
                 </div>
 
-                <div class="recipe-card">
+                <div class="recipe-card" data-category="other">
                     <a href="recipe_greek_yogurt.html">
                         <img src="images/recipe_greek_yogurt.jpg" alt="photo of a bowl of Greek yogurt">
                         <h3>Greek Yogurt Bowl</h3>

@@ -108,11 +108,12 @@ header {
     color: #1c5685;
     font-weight: bold;
     padding: 0.5rem;
+    transition: background-color 0.25s ease;
 }
 
 /* Hover and Dropdown Styles */
 .nav-links a:hover,
-.dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn,  .nav-links a:focus{
     background-color: #f1f1f1;
 }
 
@@ -138,9 +139,10 @@ header {
     color: #333333;
     padding: 12px 16px;
     display: block;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dropdown-content li a:hover {
+.dropdown-content li a:hover, .dropdown-content li a:focus {
     background-color: #f1f1f1;
     color: #000;
 }
@@ -192,7 +194,8 @@ header {
 .recipe-card {
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.13);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .recipe-card a {
@@ -222,8 +225,44 @@ header {
     transform: translateY(-5px);
 }
 
-/* Recipe Detail Page Styles */
+/* --- Category Filter --- */
+.filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+}
 
+/* Custom styled select dropdown */
+.filter-select {
+    appearance: none;
+    -webkit-appearance: none; /* for Safari */
+    padding: 10px 40px 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1c5685;
+    background-color: #fff;
+    border: 2px solid #1c5685;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.1s ease;
+}
+
+/* style when hovered or focused */
+.filter-select:hover, .filter-select:focus {
+    background-color: #1c5685;
+    color: #fff;
+}
+
+/* Hidden recipe cards */
+.recipe-card.hidden {
+    display: none;
+}
+
+
+/* ==== Recipe Detail Page Styles ==== */
 /* Large main food picture */
 .food-image {
     width: 100%;
@@ -250,6 +289,11 @@ header {
     font-size: 0.9rem;
     font-weight: bold;
     width: 140px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.toggle-btn:hover , .toggle-btn:focus {
+    background-color: #56636f17;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 /* Active toggle button */
 .toggle-btn.active {
