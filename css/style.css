@@ -51,9 +51,9 @@ footer {
 }
 
 /* no outline when mouse hovers */
-a:focus, button:focus {
+/* a:focus, button:focus {
     outline: none;
-}
+} */
 /* Show focus outline only for keyboard users */
 a:focus-visible, button:focus-visible {
     outline: 3px solid #1c5685;
@@ -256,6 +256,12 @@ header {
     color: #fff;
 }
 
+.filter-select:focus {
+    outline: 3px solid #1c5685;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 /* Hidden recipe cards */
 .recipe-card.hidden {
     display: none;
@@ -276,6 +282,7 @@ header {
 /* Mobile Toggle Container */
 .mobile-toggle-container {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin: 1.5rem 0;
 }
